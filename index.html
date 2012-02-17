@@ -1,0 +1,33 @@
+<html>
+
+	<head>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.jElementExpander.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#target").jElementExpander();
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="target">
+
+			<p>This div contains several &lt;p&gt; elements.</p>
+
+			<p>This jQuery plugin is designed to count them, then add a "read more"/"read less" style
+			link to the element after "finding" the element you want to hide from.</p>
+
+			<p>This works completely different to other expander/substring/eclipse type plugins as I
+			wanted to count WHOLE html elements as I was wanting to cut off after say several paragraph
+			elements when a H2 element (title is hit).</p>
+
+			<h2>Cut after this</h2>
+
+			<p>More detailed text here....</p>
+		</div>
+
+	</body>
+
+</html>
