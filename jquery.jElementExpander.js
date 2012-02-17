@@ -1,3 +1,14 @@
+/*!
+* jQuery jElementExpander Plugin v1.0.0
+*
+* Date: Fri Feb 17 20:28:11 2012 GTM
+* Requires: jQuery v1.3+
+*
+* Copyright 2012, Philip Jones (@philjones88)
+* Dual licensed under the MIT and GPL licenses (just like jQuery):
+* http://www.opensource.org/licenses/mit-license.php
+* http://www.gnu.org/licenses/gpl.html
+*/
 (function( $ ){
 
   $.fn.jElementExpander = function( options ) {  
