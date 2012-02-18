@@ -1,7 +1,6 @@
 ## jElementExpander
 
-A simple jQuery plugin to add "Read More" / "Read Less" style links before a certain element is found. The common scenario this plugin is for
-is when you want to add hide content when a different tag (say H2) is found.
+A simple jQuery plugin to add "Read More" / "Read Less" style links before a certain element is found. The common scenario this plugin is for is when you want to add hide content when a different tag (say H2 or UL) is found.
 
 ## Concept
 
@@ -34,8 +33,9 @@ The following options, shown here with their default values, are currently avail
 
 ```javascript
 
-// element to find, and add the read more/less links BEFORE.
-elementToBreatAt : 'H2',
+// elements to find, and add the read more/less link BEFORE.
+// The first occurance gets the read more/less link.
+elementsToBreatAt : ['H2', 'UL'],
 
 // Text for when the content is hidden
 hiddenLabel: 'Read more...',

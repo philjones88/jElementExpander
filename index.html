@@ -4,11 +4,13 @@
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="jquery.jElementExpander.js"></script>
 
+		<style types="text/css">
+			div { background-color: Silver; }
+		</style>
+
 		<script type="text/javascript">
 			$(document).ready(function(){
-				$("#target").jElementExpander();
-
-				$("#target2").jElementExpander();
+				$("#target,#target2,#target3").jElementExpander();
 			});
 		</script>
 	</head>
@@ -16,21 +18,41 @@
 	<body>
 		<h1>Demo usage scenarios</h1>
 
+		<h2>Standard usage (&lt;H2&gt; tag)</h2>
+
 		<div id="target">
 
-			<p>This div contains several &lt;p&gt; elements.</p>
+			<p>This div contains several &lt;p&gt; elements and a H2 we want to break on.</p>
 
-			<p>This jQuery plugin is designed to count them, then add a "read more"/"read less" style
-			link to the element after "finding" the element you want to hide from.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit.</p> 
 
-			<p>This works completely different to other expander/substring/eclipse type plugins as I
-			wanted to count WHOLE html elements as I was wanting to cut off after say several paragraph
-			elements when a H2 element (title is hit).</p>
+			<p>Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. </p>
 
 			<h2>Cut after this</h2>
 
 			<p>More detailed text here....</p>
 		</div>
+
+		<h2>Standard usage (&lt;UL&gt; tag)</h2>
+
+		<div id="target">
+
+			<p>This div contains several &lt;p&gt; elements and a UL we want to break on.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit.</p> 
+
+			<p>Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. </p>
+
+			<ul>
+				<li>Lorem</li>
+				<li>Ipsum</li>
+				<li>Dolor</li>
+			</ul>
+
+			<p>More detailed text here....</p>
+		</div>
+
+		<h2>When no break element is found</h2>
 
 		<div id="target2">
 
@@ -42,6 +64,24 @@
 			<p>Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. </p>
 
 			<p>Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem.</p>
+		</div>
+
+		<h2>When 2 break elements are found</h2>
+
+		<div id="target3">
+			<p>This div contains several &lt;p&gt; elements and the two break elements. It will add the read more/less after the FIRST element.</p>
+
+			<ul>
+				<li>Lorem</li>
+				<li>Ipsum</li>
+				<li>Dolor</li>
+			</ul>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit.</p>
+
+			<h2>Lorem Ipsum</h2>
+
+			<p>Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. </p>
 		</div>
 
 	</body>

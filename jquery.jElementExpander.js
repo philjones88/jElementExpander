@@ -14,7 +14,7 @@
   $.fn.jElementExpander = function( options ) {  
 
     var settings = $.extend( {
-      elementToBreatAt : 'H2',
+      elementsToBreatAt : ['H2', 'UL'],
       hiddenLabel: 'Read more...',
       showLabel: 'Read less...'
     }, options);
@@ -26,7 +26,7 @@
 
 		$(this).children().each(function(i, item) {  
 
-			if (item.tagName == settings.elementToBreatAt){
+			if (jQuery.inArray(item.tagName, settings.elementsToBreatAt) != -1) {
 				breakElementBeen = true;
 
 				hiddenElements.append(item);
