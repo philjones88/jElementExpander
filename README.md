@@ -27,6 +27,24 @@ Is turned into:
 	<p>text</p>
 </div>
 ```
+
+## Options
+
+The following options, shown here with their default values, are currently available:
+
+```javascript
+
+// element to find, and add the read more/less links BEFORE.
+elementToBreatAt : 'H2',
+
+// Text for when the content is hidden
+hiddenLabel: 'Read more...',
+
+// Text for when the content is visible
+showLabel: 'Read less...'
+
+```
+
 ## Demo
 
 A demo is the index.html file with common scenarios described above.
@@ -40,5 +58,7 @@ This plugin is free of charge and licensed under the [MIT][2] license. As a cour
 This plugin was designed for a particular scenario I have with a client's website. I don't intend to implement more features, but if they are quick you can always just ask.
 
 ## Me
-Phil Jones
+
+Author: Phil Jones
+
 Twitter: @philjones88
