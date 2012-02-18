@@ -37,9 +37,11 @@
 			}
 		});
 
-		hiddenElements.hide();
-		$(this).append(hiddenElements);
-		$(this).append(buildReadMore(hiddenElements));
+    if (breakElementBeen){
+  		hiddenElements.hide();
+  		$(this).append(hiddenElements);
+  		$(this).append(buildReadMore(hiddenElements));
+    }
     });
 
     function buildReadMore(hidden){
