@@ -19,39 +19,40 @@
       showLabel: 'Read less...'
     }, options);
 
-    return this.each(function() {        
+  return this.each(function() {
+    var $this = $(this);
 
-    	var breakElementBeen = false;
-    	var hiddenElements = $('<div class="hidden-elements"></div>');
+    var breakElementBeen = false;
+    var hiddenElements = $('<div class="hidden-elements"></div>');
 
-		$(this).children().each(function(i, item) {  
+    $this.children().each(function(i, item) {  
 
-			if (jQuery.inArray(item.tagName, settings.elementsToBreatAt) != -1) {
-				breakElementBeen = true;
+    	if (jQuery.inArray(item.tagName, settings.elementsToBreatAt) != -1) {
+    		breakElementBeen = true;
 
-				hiddenElements.append(item);
-			}else{
-				if (breakElementBeen){
-					hiddenElements.append(item);
-				}
-			}
-		});
+    		hiddenElements.append(item);
+    	} else	if (breakElementBeen){
+    			hiddenElements.append(item);
+    		}
+    });
 
     if (breakElementBeen){
-  		hiddenElements.hide();
-  		$(this).append(hiddenElements);
-  		$(this).append(buildReadMore(hiddenElements));
+    	hiddenElements.hide();
+    	$this.append(hiddenElements);
+    	$this.append(buildReadMore(hiddenElements));
     }
-    });
+  });
 
     function buildReadMore(hidden){
     	var readmore = $('<a href="javascript:void(0)">' + settings.hiddenLabel + '</a>');
 
     	readmore.click(function(){
-    		if ($(this).text() == settings.hiddenLabel){
-    			$(this).text(settings.showLabel);
+        var $this = $(this);
+
+        if ($this.text() == settings.hiddenLabel){
+    			$this.text(settings.showLabel);
     		}else{
-    			$(this).text(settings.hiddenLabel);
+    			$this.text(settings.hiddenLabel);
     		}
 
     		hidden.toggle();
