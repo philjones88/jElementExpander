@@ -10,7 +10,7 @@
 
 		<script type="text/javascript">
 			$(document).ready(function(){
-				$("#target,#target2,#target3").jElementExpander();
+				$("div.expand-content").jElementExpander();
 			});
 		</script>
 	</head>
@@ -20,7 +20,7 @@
 
 		<h2>Standard usage (&lt;H2&gt; tag)</h2>
 
-		<div id="target">
+		<div class="expand-content">
 
 			<p>This div contains several &lt;p&gt; elements and a H2 we want to break on.</p>
 
@@ -35,7 +35,7 @@
 
 		<h2>Standard usage (&lt;UL&gt; tag)</h2>
 
-		<div id="target">
+		<div class="expand-content">
 
 			<p>This div contains several &lt;p&gt; elements and a UL we want to break on.</p>
 
@@ -54,7 +54,7 @@
 
 		<h2>When no break element is found</h2>
 
-		<div id="target2">
+		<div class="expand-content">
 
 			<p>This div contains several &lt;p&gt; elements but no break element. This plugin won't
 			force a read more/less link in this scenario</p>
@@ -68,7 +68,7 @@
 
 		<h2>When 2 break elements are found</h2>
 
-		<div id="target3">
+		<div class="expand-content">
 			<p>This div contains several &lt;p&gt; elements and the two break elements. It will add the read more/less after the FIRST element.</p>
 
 			<ul>
