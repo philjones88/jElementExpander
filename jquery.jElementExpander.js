@@ -27,7 +27,7 @@
 
             $this.children().each(function(i, item) {  
 
-                if (jQuery.inArray(item.tagName, settings.elementsToBreatAt) != -1) {
+                if (jQuery.inArray(item.tagName, settings.elementsToBreatAt) != -1 && i > 0) {
                     breakElementBeen = true;
 
                     hiddenElements.append(item);
