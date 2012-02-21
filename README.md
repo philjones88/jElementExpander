@@ -35,6 +35,7 @@ The following options, shown here with their default values, are currently avail
 
 // elements to find, and add the read more/less link BEFORE.
 // The first occurance gets the read more/less link.
+// If the first element matches, it won't count that one but the next.
 elementsToBreatAt : ['H2', 'UL'],
 
 // Text for when the content is hidden
