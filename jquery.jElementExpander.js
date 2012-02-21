@@ -14,7 +14,7 @@
     $.fn.jElementExpander = function( options ) {  
 
         var settings = $.extend( {
-            elementsToBreatAt : ['H2', 'UL'],
+            elementsToBreatAt : ['H2', 'H3', 'H4', 'H5', 'H6', 'UL'],
             hiddenLabel: 'Read more...',
             showLabel: 'Read less...'
         }, options);
